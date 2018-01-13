@@ -172,6 +172,7 @@ let private editMenu onOpen (state:ViewState) (props:ViewProps) =
 
 module private WindowsMenu =
   let [<Literal>] log = "Logs"
+  let [<Literal>] newWidget = "NewWidget"
   let [<Literal>] inspector = "Inspector"
   let [<Literal>] fileBrowser = "File Browser"
   let [<Literal>] graph = "Graph"
@@ -211,6 +212,7 @@ let private windowsMenu onOpen (state:ViewState) (props:ViewProps) =
     | WindowsMenu.testWidget4     -> showWidget props.Dispatch Widgets.Test4
     | WindowsMenu.testWidget5     -> showWidget props.Dispatch Widgets.Test5
     | WindowsMenu.testWidget6     -> showWidget props.Dispatch Widgets.Test6
+    | WindowsMenu.newWidget       -> showWidget props.Dispatch Widgets.NewWidget
     | _ -> ()
     withDelay onOpen
   div [
@@ -242,7 +244,8 @@ let private windowsMenu onOpen (state:ViewState) (props:ViewProps) =
          WindowsMenu.testWidget3,     None,             Navbar.Window.testWidget3
          WindowsMenu.testWidget4,     None,             Navbar.Window.testWidget4
          WindowsMenu.testWidget5,     None,             Navbar.Window.testWidget5
-         WindowsMenu.testWidget6,     None,             Navbar.Window.testWidget6 ]
+         WindowsMenu.testWidget6,     None,             Navbar.Window.testWidget6
+         WindowsMenu.newWidget,     None,             Navbar.Window.newWidget ]
        |> List.map (fun (tipe, key, title) -> navbarItem onClick tipe key title))
   ]
 

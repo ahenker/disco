@@ -131,6 +131,7 @@ module Navbar =
     let [<Literal>] testWidget4 =       "Open String Pin Widget"
     let [<Literal>] testWidget5 =       "Open XY Slider"
     let [<Literal>] testWidget6 =       "Open Color Picker"
+    let [<Literal>] newWidget =         "Open a new Wiget"
 
   module Edit =
 
