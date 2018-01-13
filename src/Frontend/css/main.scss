@@ -560,3 +560,32 @@ html, body {
     }
   }
 }
+
+.funny-widget {
+  .headline{
+    font-size:1.9em;
+    font-weight: bold;
+    background: #ddd;
+    padding: 10px;
+  }
+
+  .funny-list{
+    display: flex;
+    flex-direction: column;
+
+    .list-row{
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .list-left{
+      background: $disco-grey;
+      padding: 10px;
+      min-width: 10%;
+    }
+    .list-right{
+      padding: 10px;
+    }
+  }
+}
